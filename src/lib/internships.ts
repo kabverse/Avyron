@@ -1,0 +1,207 @@
+export type Internship = {
+  slug: string;
+  title: string;
+  tagline: string;
+  domain: string;
+  duration: string;
+  level: "Beginner" | "Intermediate" | "Advanced";
+  projects: number;
+  price: number;
+  originalPrice: number;
+  skills: string[];
+  tools: string[];
+  curriculum: { week: string; title: string; items: string[] }[];
+  projectBreakdown: { name: string; description: string; tech: string[] }[];
+  mentor: { name: string; role: string; bio: string };
+  color: string;
+};
+
+export const internships: Internship[] = [
+  {
+    slug: "full-stack-development",
+    title: "Full Stack Development",
+    tagline: "Ship production-grade web apps with React, Node and Postgres.",
+    domain: "Engineering",
+    duration: "8 Weeks",
+    level: "Intermediate",
+    projects: 6,
+    price: 1499,
+    originalPrice: 3999,
+    skills: ["React", "TypeScript", "Node.js", "REST APIs", "PostgreSQL", "Auth & Deployment"],
+    tools: ["React", "Next.js", "Node.js", "Express", "PostgreSQL", "Prisma", "Vercel", "Git"],
+    curriculum: [
+      { week: "Week 1", title: "Foundations & Tooling", items: ["Modern JS/TS", "Git workflow", "Dev environment", "Component thinking"] },
+      { week: "Week 2", title: "React Deep Dive", items: ["Hooks", "State patterns", "Routing", "Forms"] },
+      { week: "Week 3", title: "Backend with Node", items: ["Express APIs", "Validation", "Error handling", "Logging"] },
+      { week: "Week 4", title: "Databases", items: ["Postgres schema", "Prisma ORM", "Migrations", "Queries"] },
+      { week: "Week 5", title: "Authentication", items: ["JWT", "Sessions", "OAuth", "RBAC"] },
+      { week: "Week 6", title: "Full Stack Project", items: ["Architecture", "API design", "UI integration"] },
+      { week: "Week 7", title: "Performance & Testing", items: ["Caching", "Unit tests", "E2E with Playwright"] },
+      { week: "Week 8", title: "Deploy & Review", items: ["CI/CD", "Vercel deploy", "Mentor review", "Submission"] },
+    ],
+    projectBreakdown: [
+      { name: "Task Management SaaS", description: "Multi-user task board with realtime updates and roles.", tech: ["React", "Node", "Postgres", "WebSockets"] },
+      { name: "E-commerce Storefront", description: "Catalog, cart, checkout and admin dashboard.", tech: ["Next.js", "Stripe", "Prisma"] },
+      { name: "Analytics Dashboard", description: "Visualize KPIs with charts and filtering.", tech: ["React", "Recharts", "REST"] },
+      { name: "Auth Microservice", description: "JWT-based auth with refresh tokens and RBAC.", tech: ["Node", "Express", "Redis"] },
+      { name: "Blog CMS", description: "Markdown editor with image uploads and SEO.", tech: ["Next.js", "S3", "Prisma"] },
+      { name: "Capstone", description: "Open-ended product of your choice, mentor reviewed.", tech: ["Your stack"] },
+    ],
+    mentor: { name: "Aditya Rao", role: "Staff Engineer, Ex-Razorpay", bio: "10+ years building consumer products at scale. Mentored 400+ engineers." },
+    color: "from-violet-500 to-indigo-500",
+  },
+  {
+    slug: "ai-ml-engineering",
+    title: "AI / ML Engineering",
+    tagline: "Build, evaluate and ship machine learning systems end-to-end.",
+    domain: "Artificial Intelligence",
+    duration: "10 Weeks",
+    level: "Advanced",
+    projects: 5,
+    price: 1799,
+    originalPrice: 4499,
+    skills: ["Python", "PyTorch", "Scikit-learn", "LLMs", "MLOps", "Vector DBs"],
+    tools: ["Python", "PyTorch", "HuggingFace", "LangChain", "FastAPI", "Docker", "Pinecone"],
+    curriculum: [
+      { week: "Week 1-2", title: "Python for ML", items: ["NumPy", "Pandas", "EDA", "Visualization"] },
+      { week: "Week 3-4", title: "Classical ML", items: ["Regression", "Trees", "Ensembles", "Evaluation"] },
+      { week: "Week 5-6", title: "Deep Learning", items: ["PyTorch", "CNNs", "Transformers"] },
+      { week: "Week 7-8", title: "LLMs & RAG", items: ["Prompting", "Embeddings", "Vector search", "Agents"] },
+      { week: "Week 9-10", title: "MLOps & Capstone", items: ["FastAPI", "Docker", "Deploy", "Submission"] },
+    ],
+    projectBreakdown: [
+      { name: "Customer Churn Predictor", description: "End-to-end ML pipeline with model serving.", tech: ["Scikit-learn", "FastAPI"] },
+      { name: "Image Classifier", description: "Fine-tune a CNN on a custom dataset.", tech: ["PyTorch"] },
+      { name: "RAG Chatbot", description: "Document Q&A with vector database.", tech: ["LangChain", "Pinecone"] },
+      { name: "Sentiment Analysis API", description: "Transformer-based NLP service.", tech: ["HuggingFace"] },
+      { name: "Capstone", description: "Open ML product reviewed by mentor.", tech: ["Your stack"] },
+    ],
+    mentor: { name: "Dr. Priya Menon", role: "Applied Scientist, Ex-Microsoft Research", bio: "PhD in ML. Published author and Kaggle Grandmaster." },
+    color: "from-fuchsia-500 to-pink-500",
+  },
+  {
+    slug: "data-analytics",
+    title: "Data Analytics",
+    tagline: "Turn raw data into decisions with SQL, Python and dashboards.",
+    domain: "Data",
+    duration: "6 Weeks",
+    level: "Beginner",
+    projects: 5,
+    price: 1199,
+    originalPrice: 2999,
+    skills: ["SQL", "Excel", "Python", "Tableau", "Statistics", "Storytelling"],
+    tools: ["PostgreSQL", "Python", "Pandas", "Tableau", "PowerBI", "Looker"],
+    curriculum: [
+      { week: "Week 1", title: "SQL Mastery", items: ["Joins", "Windows", "CTEs", "Optimization"] },
+      { week: "Week 2", title: "Python for Analysts", items: ["Pandas", "Cleaning", "Aggregations"] },
+      { week: "Week 3", title: "Statistics", items: ["Distributions", "Hypothesis testing", "A/B"] },
+      { week: "Week 4", title: "Visualization", items: ["Tableau", "PowerBI", "Design principles"] },
+      { week: "Week 5", title: "Business Cases", items: ["Cohorts", "Funnels", "Retention"] },
+      { week: "Week 6", title: "Capstone", items: ["Dashboard", "Report", "Submission"] },
+    ],
+    projectBreakdown: [
+      { name: "Sales Performance Dashboard", description: "Interactive Tableau dashboard.", tech: ["SQL", "Tableau"] },
+      { name: "Customer Cohort Analysis", description: "Retention & LTV analysis.", tech: ["Python", "Pandas"] },
+      { name: "A/B Test Report", description: "Statistical analysis of an experiment.", tech: ["Python", "SciPy"] },
+      { name: "Marketing Attribution", description: "Multi-touch attribution model.", tech: ["SQL", "PowerBI"] },
+      { name: "Capstone", description: "Full analytics report for a real dataset.", tech: ["Your stack"] },
+    ],
+    mentor: { name: "Neha Kulkarni", role: "Senior Data Analyst, Ex-Flipkart", bio: "Built analytics for category teams at scale." },
+    color: "from-blue-500 to-cyan-500",
+  },
+  {
+    slug: "ui-ux-design",
+    title: "UI / UX Design",
+    tagline: "Design interfaces that look beautiful and actually convert.",
+    domain: "Design",
+    duration: "6 Weeks",
+    level: "Beginner",
+    projects: 6,
+    price: 1299,
+    originalPrice: 2999,
+    skills: ["Figma", "User Research", "Wireframing", "Prototyping", "Design Systems"],
+    tools: ["Figma", "FigJam", "Notion", "Maze", "Framer"],
+    curriculum: [
+      { week: "Week 1", title: "Design Foundations", items: ["Typography", "Color", "Grids", "Hierarchy"] },
+      { week: "Week 2", title: "Research", items: ["Interviews", "Personas", "Journey maps"] },
+      { week: "Week 3", title: "Wireframing", items: ["IA", "Flows", "Low-fi"] },
+      { week: "Week 4", title: "Visual Design", items: ["Components", "States", "Iconography"] },
+      { week: "Week 5", title: "Design Systems", items: ["Tokens", "Variants", "Documentation"] },
+      { week: "Week 6", title: "Capstone", items: ["Prototype", "Handoff", "Submission"] },
+    ],
+    projectBreakdown: [
+      { name: "Mobile Banking App", description: "End-to-end UX case study.", tech: ["Figma"] },
+      { name: "SaaS Landing Page", description: "Conversion-focused marketing site.", tech: ["Figma", "Framer"] },
+      { name: "Design System", description: "Token-based component library.", tech: ["Figma"] },
+      { name: "Dashboard Redesign", description: "Revamp of a real analytics tool.", tech: ["Figma"] },
+      { name: "Onboarding Flow", description: "Animated product onboarding.", tech: ["Figma", "Principle"] },
+      { name: "Capstone", description: "Product of your choice with research.", tech: ["Your stack"] },
+    ],
+    mentor: { name: "Rhea Sharma", role: "Lead Product Designer, Ex-Swiggy", bio: "Designed for millions of users across consumer apps." },
+    color: "from-rose-500 to-orange-500",
+  },
+  {
+    slug: "cyber-security",
+    title: "Cyber Security",
+    tagline: "Learn offensive and defensive security with hands-on labs.",
+    domain: "Security",
+    duration: "8 Weeks",
+    level: "Intermediate",
+    projects: 5,
+    price: 1699,
+    originalPrice: 3999,
+    skills: ["Networking", "Linux", "Penetration Testing", "OWASP", "Cryptography"],
+    tools: ["Kali Linux", "Burp Suite", "Nmap", "Metasploit", "Wireshark"],
+    curriculum: [
+      { week: "Week 1", title: "Security Foundations", items: ["CIA triad", "Threats", "Networking"] },
+      { week: "Week 2", title: "Linux & Tooling", items: ["Bash", "Kali", "Recon"] },
+      { week: "Week 3", title: "Web Security", items: ["OWASP Top 10", "Burp Suite"] },
+      { week: "Week 4", title: "Network Pentesting", items: ["Nmap", "Metasploit"] },
+      { week: "Week 5", title: "Cryptography", items: ["Hashing", "TLS", "PKI"] },
+      { week: "Week 6", title: "Defensive Security", items: ["SIEM", "Log analysis"] },
+      { week: "Week 7", title: "CTF Practice", items: ["HackTheBox style"] },
+      { week: "Week 8", title: "Capstone", items: ["Pentest report", "Submission"] },
+    ],
+    projectBreakdown: [
+      { name: "Web App Pentest", description: "Find and report vulnerabilities in a target app.", tech: ["Burp"] },
+      { name: "Network Recon Tool", description: "Build your own scanner.", tech: ["Python"] },
+      { name: "Password Cracker", description: "Hash analysis tool.", tech: ["Python"] },
+      { name: "SIEM Setup", description: "Configure a basic SIEM and rules.", tech: ["ELK"] },
+      { name: "Capstone Pentest", description: "Full engagement report.", tech: ["Your toolkit"] },
+    ],
+    mentor: { name: "Karan Verma", role: "Senior Security Engineer", bio: "OSCP, CEH. Bug bounty hall-of-fame at major companies." },
+    color: "from-emerald-500 to-teal-500",
+  },
+  {
+    slug: "digital-marketing",
+    title: "Digital Marketing",
+    tagline: "Run real campaigns, learn growth, build a marketing portfolio.",
+    domain: "Marketing",
+    duration: "6 Weeks",
+    level: "Beginner",
+    projects: 5,
+    price: 999,
+    originalPrice: 2499,
+    skills: ["SEO", "Performance Marketing", "Analytics", "Content", "Social Media"],
+    tools: ["GA4", "Meta Ads", "Google Ads", "Ahrefs", "Notion"],
+    curriculum: [
+      { week: "Week 1", title: "Marketing Foundations", items: ["Funnels", "ICP", "Positioning"] },
+      { week: "Week 2", title: "SEO", items: ["Keywords", "On-page", "Technical SEO"] },
+      { week: "Week 3", title: "Paid Acquisition", items: ["Meta", "Google", "Creatives"] },
+      { week: "Week 4", title: "Content & Email", items: ["Newsletters", "Lifecycle"] },
+      { week: "Week 5", title: "Analytics", items: ["GA4", "Attribution", "Dashboards"] },
+      { week: "Week 6", title: "Capstone", items: ["Campaign", "Report", "Submission"] },
+    ],
+    projectBreakdown: [
+      { name: "SEO Audit", description: "Complete audit of a real website.", tech: ["Ahrefs"] },
+      { name: "Meta Ad Campaign", description: "Plan, launch, optimize.", tech: ["Meta Ads"] },
+      { name: "Email Funnel", description: "Welcome series + nurture flow.", tech: ["Mailchimp"] },
+      { name: "Analytics Dashboard", description: "GA4 + Looker dashboard.", tech: ["GA4"] },
+      { name: "Capstone Campaign", description: "End-to-end marketing plan.", tech: ["Your stack"] },
+    ],
+    mentor: { name: "Ishaan Gupta", role: "Growth Lead, Ex-Zomato", bio: "Scaled acquisition for D2C and consumer brands." },
+    color: "from-amber-500 to-pink-500",
+  },
+];
+
+export const getInternship = (slug: string) => internships.find((i) => i.slug === slug);
